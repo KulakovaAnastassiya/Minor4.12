@@ -72,11 +72,12 @@
                 <!--начало уникального содержания страницы-->
                  <div class="card-body">
                      <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                        <input type="radio" id="title" name="sort"  checked onchange="sort()" > Сортировать по заголовкам </input>
                          <input name="q" type="hidden" value="search">
                          <ul class="d-flex flex-row justify-content-around flex-wrap bg-light" id="node_for_insert">
                          <!--начало генерируемого фрагмента кода -->
                          </ul>
-                         <input class="btn btn-primary" type="Submit" value="Больше информации об исследованиях здесь">
+                         <input class="btn btn-primary" type="Submit" value="Отправить">
                      </form>
                  </div>
                  <!--окончание уникального содержания страницы-->
