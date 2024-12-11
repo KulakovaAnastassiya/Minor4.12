@@ -79,21 +79,22 @@
         <h3 align="center">Ознакомьтесь с нашими текущими исследованиями и проектами</h3>
 
         <div class="container">
-            <!--начало уникального содержания страницы-->
-             <div class="card-body">
-                 <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
-                    <input type="radio" id="title" name="sort" checked onchange="sort()" > Сортировать по заголовкам </input>
-                     <input name="q" type="hidden" value="search">
-                     <ul class="d-flex flex-row justify-content-around flex-wrap bg-light " id="node_for_insert">
-                     <!--начало генерируемого фрагмента кода -->
-                     </ul>
-                     <input class="btn btn-primary" type="Submit" value="Отправить">
-                 </form>
-             </div>
-             <!--окончание уникального содержания страницы-->
-     </div>
-     <script src="1_api.js"></script>
-    
+            <div class="card-body">
+                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                    <input type="radio" id="title" name="sort" checked onchange="sort()"> Сортировать по заголовкам
+                    </input>
+                    <input type="radio" id="title1" name="sort" checked onchange="sort()"> Не Сортировать
+                    </input>
+                    <input name="q" type="hidden" value="search">
+                    <ul class="d-flex flex-row justify-content-around flex-wrap:nowrap bg-light overflow-x "
+                        id="node_for_insert">
+                    </ul>
+                    <input class="btn btn-primary" type="Submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+        <script src="1_api.js"></script>
+
 </body>
 
 </html>
