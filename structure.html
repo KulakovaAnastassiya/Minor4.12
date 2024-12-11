@@ -30,6 +30,13 @@
 
             }
 
+            .block3 {
+                background-color: rgba(169, 174, 230, 0.451);
+                margin: auto;
+
+
+            }
+
             .photo {}
         </style>
 </head>
@@ -80,15 +87,16 @@
 
         <div class="container">
             <div class="card-body">
-                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
-                    <input type="radio" id="title" name="sort" checked onchange="sort()"> Сортировать по заголовкам
-                    </input>
-                    <input name="q" type="hidden" value="search">
-                    <ul class="d-flex flex-row justify-content-around flex-wrap bg-light  "
-                        id="node_for_insert">
-                    </ul>
-                    <input class="btn btn-primary" type="Submit" value="Отправить">
-                </form>
+                <div class=".block3">
+                    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                        <input type="radio" id="title" name="sort" checked onchange="sort()"> Сортировать по заголовкам
+                        </input>
+                        <input name="q" type="hidden" value="search">
+                        <ul class="d-flex flex-row justify-content-around flex-wrap bg-light  " id="node_for_insert">
+                        </ul>
+                        <input class="btn btn-primary" type="Submit" value="Отправить">
+                    </form>
+                </div>
             </div>
         </div>
         <script src="1_api.js"></script>
