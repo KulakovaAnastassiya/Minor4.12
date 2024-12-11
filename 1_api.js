@@ -1,4 +1,3 @@
-
 function sort() {
     let title = document.getElementById("title")
     if (title.checked) {
@@ -6,32 +5,37 @@ function sort() {
         getResponce1()
     }
     let title1 = document.getElementById("title1")
-    if (title1.checked) {
+    if (price.checked) {
         document.getElementById('node_for_insert').innerHTML = '';
         getResponce2()
     }
 }
-async function getResponce2() {
+async function getResponce() {
+
     let responce = await fetch("shop.json")
 
     let content = await responce.text()
     console.log(content)
     content = JSON.parse(content)
     content = content.splice(0, 11)
+    //content.sort()
     console.log(content)
-} ;
-let node_for_insert = document.getElementById("node_for_insert")
-for (key in content_title) {
-            node_for_insert.innerHTML += `
-            <li style="width: 310px" class="d-flex flex-column m-1 p-1 border bg-body">
-            <img style="width: 180px" class="align-self-center" src=${content[key].img}>
-            <h5 class="card-title">${content[key].title}</h5>
-            <p class="card-text">${content[key].description}</p>
-            <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
-            <p class="card-text" >Хочу узнать больше<input class="w-25" type="checkbox" name="check" value="0" onClick='this.value = this.checked ? 1 : 0'></p>
-            </li>
-                    `
-        }
+
+    let node_for_insert = document.getElementById("node_for_insert")
+    //node_for_insert.innerHTML='';
+    for (key in content_price) {
+        node_for_insert.innerHTML += `
+        <li style="width: 310px" class="d-flex flex-column m-1 p-1 border bg-body">
+        <img style="width: 180px" class="align-self-center" src=${content[key].img}>
+        <h5 class="card-title">${content[key].title}</h5>
+        <p class="card-text">${content[key].description}</p>
+        <input type="hidden" name= "vendor_code" value=${content[key].vendor_code}>
+        <p class="card-text" >Хочу узнать больше<input class="w-25" type="checkbox" name="check" value="0" onClick='this.value = this.checked ? 1 : 0'></p>
+        </li>
+                `
+    }
+
+}
 async function getResponce1() {
     let responce = await fetch("shop.json")
 
@@ -43,8 +47,8 @@ async function getResponce1() {
     let key
 
     content_title = content.sort((a, b) => {
-        const nameA = a.title.toUpperCase(); 
-        const nameB = b.title.toUpperCase(); 
+        const nameA = a.title.toUpperCase();
+        const nameB = b.title.toUpperCase();
         if (nameA < nameB) {
             return -1;
         }
@@ -53,10 +57,10 @@ async function getResponce1() {
         }
         return 0;
 
-    }) ;
+    });
     let node_for_insert = document.getElementById("node_for_insert")
     for (key in content_title) {
-                node_for_insert.innerHTML += `
+        node_for_insert.innerHTML += `
                 <li style="width: 310px" class="d-flex flex-column m-1 p-1 border bg-body">
                 <img style="width: 180px" class="align-self-center" src=${content[key].img}>
                 <h5 class="card-title">${content[key].title}</h5>
@@ -65,7 +69,7 @@ async function getResponce1() {
                 <p class="card-text" >Хочу узнать больше<input class="w-25" type="checkbox" name="check" value="0" onClick='this.value = this.checked ? 1 : 0'></p>
                 </li>
                         `
-            }
+    }
 
 }
 
