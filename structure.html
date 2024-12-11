@@ -13,93 +13,76 @@
         <style>
             body {
                 background-color: rgba(253, 252, 226, 0.358)
+    
             }
-
-            .block1 {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                margin: auto;
-                background-color: lightblue;
-
-
-            }
-
+    
             .block2 {
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 margin: auto;
-
-
+    
+    
             }
-
-            .block3 {
-                background-color: rgba(169, 174, 230, 0.451);
-                margin: auto;
-
-
+            .photo {
             }
-
-            .photo {}
         </style>
 </head>
 
 <body>
-    <div class="block1">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="photo"> <img src="photo.avif" height="120" width="100" /> </div>
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Исследовательская лаборатория №13</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="structure.html">Текущие проекты</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Контакты
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="ank.html">Подать заявку на исследование</a></li>
-                                <li><a class="dropdown-item" href="задача.html">Контактные данные </a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Research Lab No.
-                                13</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="block2">
-        <h3 align="center">Ознакомьтесь с нашими текущими исследованиями и проектами</h3>
-
-        <div class="container">
-            <div class="card-body">
-                    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
-                        <input type="radio" id="title" name="sort" onchange="sort()"> Сортировать по
-                        заголовкам
-                        </input>
-                        <input name="q" type="hidden" value="search">
-                        <ul class="d-flex flex-row justify-content-around flex-wrap bg-light  " id="node_for_insert">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="photo"> <img src="photo.avif" height="120" width="100" /> </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Исследовательская лаборатория №13</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="structure.html">Текущие проекты</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Контакты
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ank.html">Подать заявку на исследование</a></li>
+                            <li><a class="dropdown-item" href="задача.html">Контактные данные </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                         </ul>
-                        <input class="btn btn-primary" type="Submit" value="Отправить">
-                    </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Research Lab No. 13</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <script src="1_api.js"></script>
+    </nav>
+    <div class="block2">
+            <h3 align="center">Ознакомьтесь с нашими текущими исследованиями и проектами</h3>
 
+            <div class="container">
+                <!--начало уникального содержания страницы-->
+                 <div class="card-body">
+                     <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                         <input name="q" type="hidden" value="search">
+                         <ul class="d-flex flex-row justify-content-around flex-wrap bg-light" id="node_for_insert">
+                         <!--начало генерируемого фрагмента кода -->
+                         </ul>
+                         <input class="btn btn-primary" type="Submit" value="Больше информации об исследованиях здесь">
+                     </form>
+                 </div>
+                 <!--окончание уникального содержания страницы-->
+         </div>
+         <script src="1_api.js"></script>
+        
 </body>
 
 </html>
